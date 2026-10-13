@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="error">
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%-5p %c{1}:%L - %m%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <!-- Root at INFO to suppress noisy third-party debug logs -->
+        <Root level="info">
+            <AppenderRef ref="console"/>
+        </Root>
+
+        <!-- This extension's package at DEBUG -->
+        <Logger name="app.krista.extensions.ebplayground.ebtesting.ebarithmetic" level="debug" additivity="false">
+            <AppenderRef ref="console"/>
+        </Logger>
+        <Logger name="app.krista" level="debug" additivity="false">
+            <AppenderRef ref="console"/>
+        </Logger>
+    </Loggers>
+</Configuration>
